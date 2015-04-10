@@ -1,19 +1,20 @@
 function love.load()
 
-	character = {}
+  character = { } 
 	character.x = 300
 	character.y = 400
-
+  
 	love.graphics.setBackgroundColor(225,153,0)
 
 	love.graphics.setColor(0,0,225)
-
+  
+  characterSprite = love.graphics.newImage("assets/snake-head.png")
+  
 end
 
 function love.draw()
 
-	-- using a rectangle to represent the snake currently
-	love.graphics.rectangle("fill", character.x, character.y, 10, 20)
+  love.graphics.draw(characterSprite,character.x,character.y)
 
 end
 
